@@ -19,6 +19,27 @@ class Line {
 	}
 }
 
+class Rectangle{
+	 Point a;
+	 Point b;
+	 Point c;
+	 Point d;
+	 	 	 
+	 Rectangle (Point vala, Point valb, Point valc, Point vald) {
+		 if (vala.y == valb.y && valb.x == valc.x && valc.y == vald.y && vald.x == vala.x) {
+			 a = vala;
+			 b = valb;		 
+			 c = valc;
+			 d = vald;		 
+		 } else {
+			 System.out.println("This not square.");
+			 a = b = c = d = null;			 
+		 }
+	 }
+}
+
+
+
 public class TestGitHub {
 
 	public static void main(String[] args) {
