@@ -30,6 +30,27 @@ class Triangle {
 		c = valpoint3;
 	}
 }
+	
+ class Square {
+	 Point a;
+	 Point b;
+	 Point c;
+	 Point d;
+	 	 	 
+	 Square (Point vala, Point valb, Point valc, Point vald) {
+		 if (vala.y == valb.y && valb.x == valc.x && valc.y == vald.y && vald.x == vala.x) {
+			 a = vala;
+			 b = valb;		 
+			 c = valc;
+			 d = vald;		 
+		 } else {
+			 System.out.println("This not square.");
+			 a = b = c = d = null;			 
+		 }
+	 }
+ }
+ 
+
 
 public class TestGitHub {
 
@@ -50,7 +71,14 @@ public class TestGitHub {
 		System.out.println("A(" + abc.a.x + "," + abc.a.y + ")");
 		System.out.println("B(" + abc.b.x + "," + abc.b.y + ")");
 		System.out.println("C(" + abc.c.x + "," + abc.c.y + ")");
-				
+		//for square
+		Point d = new Point(7, 8);
+		Square abcd = new Square(a, b, c, d);		
+		System.out.println("Square ABCD:");
+		System.out.println("A(" + abcd.a.x + "," + abcd.a.y + ")");
+		System.out.println("B(" + abcd.b.x + "," + abcd.b.y + ")");
+		System.out.println("C(" + abcd.c.x + "," + abcd.c.y + ")");
+		System.out.println("D(" + abcd.d.x + "," + abcd.d.y + ")");
 	}
 
 }
